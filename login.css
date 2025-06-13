@@ -1,0 +1,140 @@
+/* Reset */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(135deg, #6a11cb 0%, #2575fc 100%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  padding: 20px;
+}
+
+.login-container {
+  background: white;
+  padding: 40px 30px;
+  border-radius: 12px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+  width: 350px;
+  text-align: center;
+}
+
+.login-container h2 {
+  color: #333;
+  margin-bottom: 30px;
+  font-weight: 700;
+}
+
+.form-group {
+  position: relative;
+  margin-bottom: 30px;
+}
+
+input[type="email"],
+input[type="password"] {
+  width: 100%;
+  padding: 14px 12px 14px 12px;
+  font-size: 16px;
+  border: 2px solid #ddd;
+  border-radius: 8px;
+  background: transparent;
+  outline: none;
+  transition: border-color 0.3s ease;
+}
+
+input[type="email"]:focus,
+input[type="password"]:focus {
+  border-color: #2575fc;
+  box-shadow: 0 0 5px #2575fc;
+}
+
+label {
+  position: absolute;
+  top: 14px;
+  left: 12px;
+  background: white;
+  padding: 0 6px;
+  color: #aaa;
+  font-size: 16px;
+  pointer-events: none;
+  transition: 0.3s ease all;
+}
+
+input:focus + label,
+input:not(:placeholder-shown) + label {
+  top: -10px;
+  left: 8px;
+  font-size: 12px;
+  color: #2575fc;
+  font-weight: 600;
+}
+
+button {
+  width: 100%;
+  padding: 14px;
+  border: none;
+  border-radius: 8px;
+  background: #2575fc;
+  color: white;
+  font-size: 18px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+button:hover {
+  background: #1a52d1;
+}
+
+p {
+  margin-top: 20px;
+  font-size: 15px;
+  color: #555;
+}
+
+p a {
+  color: #2575fc;
+  font-weight: 600;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+p a:hover {
+  color: #1a52d1;
+}
+
+.error-msg, .success-msg {
+  margin-bottom: 20px;
+  padding: 12px 10px;
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 14px;
+  max-width: 350px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+}
+
+.error-msg {
+  background: #ffe6e6;
+  color: #b00000;
+  border: 1px solid #b00000;
+}
+
+.success-msg {
+  background: #e6ffe6;
+  color: #006600;
+  border: 1px solid #006600;
+}
+
+@media (max-width: 400px) {
+  .login-container {
+    width: 90%;
+    padding: 30px 20px;
+  }
+}
